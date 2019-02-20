@@ -2,7 +2,9 @@
 templateKey: blog-post
 title: In Memorial
 date: 2015-11-12T15:57:03.750Z
-description: Someone I loved.
+description: Someone I loved
+tags:
+  - long-form
 ---
 <div class="baas serif">
   <figure class="baas-entry">
