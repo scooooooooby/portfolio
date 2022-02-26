@@ -1,28 +1,30 @@
-# helenvholmes.com
+# Remix Notion Example
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b654c94e-08a6-4b79-b443-7837581b1d8d/deploy-status)](https://app.netlify.com/sites/gatsby-starter-netlify-cms-ci/deploys)
+This is a basic example of how to submit a form to a Notion DB.
+It does not include fancy things like form validation. 
 
-This repo contains my portfolio website that is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org): **[helenvholmes.com](https://helenvholmes.com/)**.
+## Setup
 
-It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
+Create a Table page in Notion, and add columns:
+* Firstname
+* Lastname
+* Email
 
-## Prerequisites
 
-- Node (v8.2.0 or higher)
-- [Gatsby CLI](https://www.gatsbyjs.org/docs/)
+![Notion DB Example](./assets/db-example.png)
 
-### Access Locally
-```
-$ git clone https://github.com/helenvholmes/portfolio.git
-$ cd portfolio
-$ yarn
-$ npm run develop
-```
-To test the CMS locally, you'll need run a production build of the site:
-```
-$ npm run build
-$ npm run serve
-```
+Then head over to the [Notion API Documentation](https://developers.notion.com/) to generate an API key. You will have to click the `My integrations` on the top right to create an integration and generate an API key.
 
-## Purgecss
-This plugin uses [gatsby-plugin-purgecss](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/) and [bulma](https://bulma.io/). The bulma builds are usually ~170K but reduced 90% by purgecss.
+Go back to your Notion page, click `Share` in the top right, and search for the integration you just created and give it access to the DB.
+
+![Notion DB Example](./assets/integration-access.png)
+
+In the same `Share` dialog, click `Copy Link`. This will give you a link to your page.
+
+It should look something like this:
+https://www.notion.so/{DB-ID}?v={PAGE-ID}
+
+Copy the `DB-ID` from the URL and add it to the `.env` file under the key `NOTION_DB_ID`.
+Also add your API key to the `NOTION_TOKEN` key.
+
+Then just run `npm run dev` to start up remix, and submit your form!

@@ -1,0 +1,42 @@
+{
+  "version": "1f48cd38",
+  "entry": {
+    "module": "/build/entry.client-LLDCOK6S.js",
+    "imports": [
+      "/build/_shared/chunk-2THHQEKS.js"
+    ]
+  },
+  "routes": {
+    "root": {
+      "id": "root",
+      "path": "",
+      "module": "/build/root-OSBCEXSS.js",
+      "hasAction": true,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/index": {
+      "id": "routes/index",
+      "parentId": "root",
+      "index": true,
+      "module": "/build/routes/index-7HRDOD67.js",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/wicching/index": {
+      "id": "routes/wicching/index",
+      "parentId": "root",
+      "path": "wicching",
+      "index": true,
+      "module": "/build/routes/wicching/index-HZYXDVBU.js",
+      "hasAction": false,
+      "hasLoader": true,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    }
+  },
+  "url": "/build/manifest-1F48CD38.js"
+}
