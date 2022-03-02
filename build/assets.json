@@ -1,8 +1,9 @@
 {
-  "version": "800430d9",
+  "version": "d709a7b6",
   "entry": {
-    "module": "/build/entry.client-LLDCOK6S.js",
+    "module": "/build/entry.client-VCTCU6HR.js",
     "imports": [
+      "/build/_shared/chunk-JA4MHHVD.js",
       "/build/_shared/chunk-2THHQEKS.js"
     ]
   },
@@ -20,9 +21,9 @@
       "id": "routes/index",
       "parentId": "root",
       "index": true,
-      "module": "/build/routes/index-4R5QXQUM.js",
+      "module": "/build/routes/index-23CLV6EG.js",
       "imports": [
-        "/build/_shared/chunk-OME7HNEJ.js"
+        "/build/_shared/chunk-GWZ2QZ3D.js"
       ],
       "hasAction": false,
       "hasLoader": true,
@@ -34,9 +35,9 @@
       "parentId": "root",
       "path": "wicching",
       "index": true,
-      "module": "/build/routes/wicching/index-W733L75R.js",
+      "module": "/build/routes/wicching/index-P5VHILBW.js",
       "imports": [
-        "/build/_shared/chunk-OME7HNEJ.js"
+        "/build/_shared/chunk-GWZ2QZ3D.js"
       ],
       "hasAction": false,
       "hasLoader": true,
@@ -44,5 +45,5 @@
       "hasErrorBoundary": false
     }
   },
-  "url": "/build/manifest-800430D9.js"
+  "url": "/build/manifest-D709A7B6.js"
 }
