@@ -1,35 +1,26 @@
 import {
   Link, 
   Links,
+  useLoaderData
 } from "remix";
+import { NotionAPI } from "notion-client";
+import { NotionRenderer } from "react-notion-x";
+
+export async function loader() {
+  const blockId = "eed8fd8b18414fd385b68e800822d198";
+
+  const notionAPI = new NotionAPI();
+  const response = await notionAPI.getPage(blockId);
+
+  return response;
+}
 
 export default function Index() {
+  const data = useLoaderData();
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Remix Form to Notion DB Example</h1>
+    <div>
+      <NotionRenderer recordMap={data} fullPage={true} darkMode={false} />
       <Link to="/wicching">Wicching Hour</Link>
-      <form method="post">
-        <div>
-          <label>
-            First name: <input type="text" name="firstname" />
-          </label>
-        </div>
-        <div>
-          <label>
-            Last name: <input type="text" name="lastname" />
-          </label>
-        </div>
-        <div>
-          <label>
-            Email: <input type="text" name="email" />
-          </label>
-        </div>
-        <div>
-          <button type="submit" className="button">
-            Submit
-          </button>
-        </div>
-      </form>
     </div>
   );
 }

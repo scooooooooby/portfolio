@@ -15,7 +15,7 @@ export function links() {
 }
 
 export function meta() {
-  return { title: "New Remix App" };
+  return { title: "Helen V. Holmes" };
 }
 
 export const action = async ({ request }) => {
