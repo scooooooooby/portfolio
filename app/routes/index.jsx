@@ -17,9 +17,6 @@ export default function Index() {
   const data = useLoaderData();
   return (
     <div>
-      <Header>
-        <Link to="/">Home</Link>
-      </Header>
       <NotionRenderer
         recordMap={data}
         fullPage={true}
@@ -58,7 +55,6 @@ export default function Index() {
           collectionRow: CollectionRow,
         }}
       />
-      <Link to="/wicching">Wicching Hour</Link>
     </div>
   );
 }

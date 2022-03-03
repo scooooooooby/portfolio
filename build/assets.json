@@ -1,5 +1,5 @@
 {
-  "version": "7bb6f038",
+  "version": "2387eeeb",
   "entry": {
     "module": "/build/entry.client-VCTCU6HR.js",
     "imports": [
@@ -11,7 +11,10 @@
     "root": {
       "id": "root",
       "path": "",
-      "module": "/build/root-RPGKNG5E.js",
+      "module": "/build/root-VOKWTXTK.js",
+      "imports": [
+        "/build/_shared/chunk-4FE2TCEJ.js"
+      ],
       "hasAction": false,
       "hasLoader": false,
       "hasCatchBoundary": false,
@@ -21,9 +24,8 @@
       "id": "routes/$id",
       "parentId": "root",
       "path": ":id",
-      "module": "/build/routes/$id-FFI5U6TW.js",
+      "module": "/build/routes/$id-IQY3VUXE.js",
       "imports": [
-        "/build/_shared/chunk-4KWX5CRE.js",
         "/build/_shared/chunk-GWZ2QZ3D.js"
       ],
       "hasAction": false,
@@ -35,9 +37,8 @@
       "id": "routes/index",
       "parentId": "root",
       "index": true,
-      "module": "/build/routes/index-6KZ6LN7K.js",
+      "module": "/build/routes/index-RX6C5BYR.js",
       "imports": [
-        "/build/_shared/chunk-4KWX5CRE.js",
         "/build/_shared/chunk-GWZ2QZ3D.js"
       ],
       "hasAction": false,
@@ -60,5 +61,5 @@
       "hasErrorBoundary": false
     }
   },
-  "url": "/build/manifest-7BB6F038.js"
+  "url": "/build/manifest-2387EEEB.js"
 }

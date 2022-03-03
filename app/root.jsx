@@ -1,4 +1,5 @@
 import {
+  Link,
   Links,
   LiveReload,
   Meta,
@@ -7,6 +8,7 @@ import {
   ScrollRestoration,
   json,
 } from "remix";
+import Header, { links as headerLinks } from "./components/Header/Header";
 
 // Intelligent resets
 import normalizeStyles from "normalize.css/normalize.css";
@@ -22,15 +24,14 @@ import dropdownStyles from "rc-dropdown/assets/index.css";
 
 import styles from "./app.css";
 
-export function links() {
-  return [
-    { rel: "stylesheet", href: normalizeStyles },
-    { rel: "stylesheet", href: reactNotionXStyles },
-    { rel: "stylesheet", href: prismjsStyles },
-    { rel: "stylesheet", href: dropdownStyles },
-    { rel: "stylesheet", href: styles },
-  ];
-}
+export const links = () => [
+  ...headerLinks(),
+  { rel: "stylesheet", href: normalizeStyles },
+  { rel: "stylesheet", href: reactNotionXStyles },
+  { rel: "stylesheet", href: prismjsStyles },
+  { rel: "stylesheet", href: dropdownStyles },
+  { rel: "stylesheet", href: styles },
+];
 
 export function meta() {
   return { title: "Helen V. Holmes" };
@@ -46,6 +47,14 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <Header>
+          <Link to="/">Home</Link>
+          <Link to="/">Home</Link>
+          <Link to="/">Home</Link>
+          <Link to="/">Home</Link>
+          <Link to="/">Home</Link>
+          <Link to="/wicching">Wicching Hour</Link>
+        </Header>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
