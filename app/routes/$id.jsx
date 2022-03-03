@@ -4,8 +4,8 @@ import { getPageTitle, getAllPagesInSpace } from "notion-utils";
 import { Collection, CollectionRow, NotionRenderer } from "react-notion-x";
 import Header from "../components/Header/Header";
 
-export async function loader() {
-  const blockId = "eed8fd8b18414fd385b68e800822d198";
+export async function loader(id) {
+  const blockId = id.params.id;
 
   const notionAPI = new NotionAPI();
   const response = await notionAPI.getPage(blockId);
@@ -58,7 +58,6 @@ export default function Index() {
           collectionRow: CollectionRow,
         }}
       />
-      <Link to="/wicching">Wicching Hour</Link>
     </div>
   );
 }

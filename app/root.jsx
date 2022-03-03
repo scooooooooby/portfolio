@@ -8,39 +8,33 @@ import {
   json,
 } from "remix";
 
-import styles from "react-notion-x/src/styles.css";
+// Intelligent resets
+import normalizeStyles from "normalize.css/normalize.css";
+
+// core styles shared by all of react-notion-x
+import reactNotionXStyles from "react-notion-x/src/styles.css";
+
+// used for code syntax highlighting
+import prismjsStyles from "prismjs/themes/prism-tomorrow.css";
+
+// used for collection views
+import dropdownStyles from "rc-dropdown/assets/index.css";
+
+import styles from "./app.css";
 
 export function links() {
-  return [{ rel: "stylesheet", href: styles }];
+  return [
+    { rel: "stylesheet", href: normalizeStyles },
+    { rel: "stylesheet", href: reactNotionXStyles },
+    { rel: "stylesheet", href: prismjsStyles },
+    { rel: "stylesheet", href: dropdownStyles },
+    { rel: "stylesheet", href: styles },
+  ];
 }
 
 export function meta() {
   return { title: "Helen V. Holmes" };
 }
-
-export const action = async ({ request }) => {
-  const form = await request.formData();
-  console.log(form);
-  const firstname = form.get("firstname");
-  const lastname = form.get("lastname");
-  const email = form.get("email");
-
-  await notion.pages.create({
-    parent: { database_id: process.env.NOTION_DB_ID },
-    properties: {
-      Firstname: {
-        title: [{ text: { content: firstname } }],
-      },
-      Lastname: {
-        rich_text: [{ text: { content: lastname } }],
-      },
-      Email: {
-        rich_text: [{ text: { content: email } }],
-      },
-    },
-  });
-  return json({ success: true });
-};
 
 export default function App() {
   return (

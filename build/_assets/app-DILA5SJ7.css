@@ -1,0 +1,17 @@
+/* react-notion-x overrides */
+
+:root {
+  --notion-max-width
+}
+
+.notion-column {
+  overflow-x: scroll;
+}
+
+.notion-column::-webkit-scrollbar {
+  display: none;
+}
+
+.notion-collection {
+  align-self: flex-start;
+}

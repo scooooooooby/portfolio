@@ -1,0 +1,5 @@
+/* react-notion-x overrides */
+
+.notion-column {
+  overflow-x: scroll;
+}
