@@ -47,14 +47,6 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Header>
-          <Link to="/">Home</Link>
-          <Link to="/">Home</Link>
-          <Link to="/">Home</Link>
-          <Link to="/">Home</Link>
-          <Link to="/">Home</Link>
-          <Link to="/wicching">Wicching Hour</Link>
-        </Header>
         <Outlet />
         <ScrollRestoration />
         <Scripts />

@@ -10,6 +10,10 @@
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+.notion-column {
+  overflow-x: scroll;
+}
+
 .notion-column::-webkit-scrollbar {
   display: none;
 }
