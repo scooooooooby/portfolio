@@ -1,9 +1,0 @@
-/* react-notion-x overrides */
-
-.notion-column {
-  overflow-x: scroll;
-}
-
-.notion-collection {
-  align-self: flex-start;
-}

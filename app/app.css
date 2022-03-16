@@ -25,3 +25,9 @@
 .notion-page {
   width: var(--notion-max-width);
 }
+
+.notion-collection-header,
+.notion-table-view {
+  padding-left: unset !important;
+  padding-right: unset !important;
+}

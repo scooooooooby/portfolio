@@ -1,9 +1,0 @@
-/* react-notion-x overrides */
-
-.notion-column {
-  overflow-x: scroll;
-}
-
-.notion-app {
-  background-color: tomato;
-}
