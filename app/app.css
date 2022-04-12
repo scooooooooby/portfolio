@@ -1,13 +1,30 @@
 /* react-notion-x overrides */
 
 :root {
-  --notion-max-width: 1000px;
+  --notion-max-width: 80%;
 }
 
 * {
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Butler", sans-serif;
+}
+
+.notion-page-icon {
+  display: inline-block;
+  margin-right: 2px;
+  width: 15px;
+}
+
+.notion-title {
+  font-size: 1em;
+}
+
+.notion-text {
+  margin-bottom: 1em;
+}
+
+.notion-page-cover {
+  display: none;
 }
 
 .notion-column::-webkit-scrollbar {
@@ -23,6 +40,7 @@
 }
 
 .notion-page {
+  margin: auto;
   width: var(--notion-max-width);
 }
 
@@ -30,4 +48,8 @@
 .notion-table-view {
   padding-left: unset !important;
   padding-right: unset !important;
+}
+
+.notion-red_background {
+  display: none;
 }
