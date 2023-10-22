@@ -1,0 +1,360 @@
+---
+templateKey: blog-post
+title: The State of Devtools
+date: 2015-12-16T16:16:24.611Z
+description: What's the state of devtools?
+tags:
+  - essay
+---
+<div class='union-header'>
+  <div class='union-header-emoji'>
+    <img src='/images/union/flag.png' alt='American flag' />
+  </div>
+  <h1 class='union-didot'>State of the 
+    <del class='union-strikeout'>Union</del>
+    <div class='union-neue'>Devtools</div>
+  </h1>
+</div>
+
+<p>It’s the end of 2015. What’s the state of devtools?</p>
+
+<p>Not just our devtools. Devtools… across the board?</p>
+
+<p>Switching from one tool set to another is confusing; for the average web dev, they have to do it enough that it’s easy to have hatred for the devtools that don’t look like the others. Of course, company directives affect devtools, meaning that everyone’s devtools inherently <em>must</em> look different: Google has power(💸) that Mozilla does not, Apple has thoughts on the web that Mozilla does not, Microsoft has very few directives it takes from the web that Mozilla does. Knowing where these people are and what they’re doing is useful, if only so we can make decisions on what we think is worth our time and effort, what we think the community needs the most, what we think would get more people using Firefox devtools.</p>
+
+<p>We also are different from the normal web dev. For one, we are building these tools; things that are obvious to us are not obvious to someone opening the toolbox who needs to learn how to use it on the fly. Second, we are in tech, and benefit from all of the knowledge that gets shared within Mozilla, tech companies, Medium, Twitter, knowing who’s who. This is not the norm. Web devs are at all skill levels and within different communities, and thinking that our experience is representative of the greater web dev community is dangerously erroneous. This is why we need user testing. This is why we need to ask ourselves while we’re building:</p>
+</div>
+
+<ol class='union-important-questions' id='union-important-questions'>
+  <li>How can we make this tool easier to understand?</li>
+
+  <li>How can we  balance low-skill users’ comprehension of a tool with  mid- and high-skill users’ needs?</li>
+
+  <li>How can we validate and destroy our own assumptions of what we think makes any particular tool easier or more useful?</li>
+</ol>
+
+<img src='/images/union/google.png' alt='Google logo' class='union-logo' />
+
+<div class='post'>
+  <p>Google has awesome devtools.</p>
+
+  <p>¯\_(ツ)_/¯</p>
+
+  <p>It’s because of who they are as a company. They make the majority of their money from web advertising. They want/need people to make better and better websites that can generate ad revenue. The success of the web is important to their bottom line (which at the end of the day is the best way to get people to put money and effort into anything).</p>
+
+  <p>What they’re up to based on their dev summit:</p>
+</div>
+
+<ol class='union-points'>
+  <div class='union-point'>
+    <div class='union-point-detail'>
+      <p class='union-sw'>sw.js</p>
+      <p class='union-sw'>sw.js</p>
+      <p class='union-sw'>sw.js</p>
+      <p class='union-sw'>sw.js</p>
+      <p class='union-sw'>sw.js</p>
+      <p class='union-sw'>sw.js</p>
+      <p class='union-sw'>sw.js</p>
+    </div>
+
+    <li><strong class='union-point-strong'>Service workers.</strong> Google wants the web to have the power of native apps. In the U.S. Apple is a huge competitor, and they’re determined to make the mobile space win. With the number of Americans using mobile devices as their primary (or only) computing platform on the rise, this is a reasonable fear to have on Google’s part. Also, it’s safe to say that whatever content deals we’re getting around service worker debugging, Chrome is getting too. They’ve bothered putting the time into nice tutorials for it, too.</li>
+  </div>
+
+  <div class='union-point'>
+    <div class='union-point-detail'>
+      <video src='/images/union/design-dev-market.mp4' autoplay loop>
+        Sorry, your browser doesn't support embedded videos, 
+        but don't worry, you can <a href='/images/union/design-dev-market.mp4'>download it</a>
+        and watch it with your favorite video player!
+      </video> 
+    </div>
+
+    <li><strong class='union-point-strong'>They’re attacking the designer/developer market.</strong> I think it caught many of us by surprise that there was a big push for bigger and better designer tools in the Chrome devtools since we were hoping that we would be the forerunners in this arena, but unfortunately that’s just not the case. It’s a good idea, and that’s why they’re doing it. This means we’ll have to prioritize wisely about what is and what isn’t worth our time. Chrome’s efforts include: animation tools, color palettes/pickers, and some sort of WYSIWYG editor that I’ll talk more about in a moment.</li>
+  </div>
+
+  <div class='union-point'>
+    <div class='union-point-detail'>
+      <video src='/images/union/material-design.mp4' autoplay loop>
+        Sorry, your browser doesn't support embedded videos, 
+        but don't worry, you can <a href='/images/union/material-design.mp4'>download it</a>
+        and watch it with your favorite video player!
+      </video> 
+    </div>
+
+    <li><strong class='union-point-strong'>They’re integrating with the larger Material Design style guide, i.e., UI improvements.</strong> Chrome’s spent a lot of time making their devtools look better. Google spent years on a beautifully fleshed out design system called Material Design that devtools got retrofitted into. They have really amazing <a href="https://www.google.com/design/spec/animation/authentic-motion.html">animation design</a> as part of that system that ties together the larger Google ecosystem. They’ve had a <a href="https://twitter.com/maxwkr">fulltime designer</a> on the team for a bit now. We’re going to continue seeing UI improvements from them.</li>
+  </div>
+
+  <div class='union-point'>
+    <div class='union-point-detail'>
+      <video src='/images/union/rdm-always.mp4' autoplay loop>
+        Sorry, your browser doesn't support embedded videos, 
+        but don't worry, you can <a href='/images/union/rdm-always.mp4'>download it</a>
+        and watch it with your favorite video player!
+      </video>
+    </div>
+
+    <li><strong class='union-point-strong'>They’ve bought into the mobile-first philosophy and are applying it to everything.</strong> They’ve decided to always have responsive design mode enabled and have cleaned up that mode substantially to fade into the background and be less intrusive.</li>
+  </div>
+
+  <div class='union-point'>
+    <div class='union-point-detail'>
+      <video src='/images/union/animation-timelines.mp4' autoplay loop>
+        Sorry, your browser doesn't support embedded videos, 
+        but don't worry, you can <a href='/images/union/animation-timelines.mp4'>download it</a>
+        and watch it with your favorite video player!
+      </video>
+    </div>
+
+    <li><strong class='union-point-strong'>They’re using animation as a metaphor for the web.</strong> A lot of stuff is on a timeline.</li>
+  </div>
+
+  <div class='union-point'>
+    <div class='union-point-detail'>
+      <img src='/images/union/rail.png' alt="RAIL, Google's new performance model" />
+    </div>
+
+    <li><strong class='union-point-strong'>There’s a big push toward performance.</strong> This is again, back to wanting people to use and care about the web because it means ad revenue. The biggest argument against ads is that they're slow. People use browsers when websites load quickly. Their new tools for this are technologically impressive, but also (if I may say so) confusing to a layperson.</li>
+  </div>
+
+  <div class='union-point'>
+    <div class='union-point-detail'>
+      <img src='/images/union/complex-tools.png' alt="Google's more complex tooling." class='no-border' />
+    </div>
+
+    <li><strong class='union-point-strong'>There hasn’t been as much work in other more high-powered tools (performance and SW debugging work aside, but those are related to more Google-ish goals I’ve mentioned above).</strong> The debugger, profiler, etc.—they’ve been given lower priority because the majority of people aren’t using them. They’re high-powered tools for high-powered developers. Instead of putting a lot of effort into tools that fewer people use, they’re concentrating on the tools that target a majority. It's a numbers game. It's knowing that newbs get p4wn3d by complex devtools, as Jeff would say.</li>
+  </div>
+</ol>
+
+<blockquote class='union-newb-callout'>
+  “newbs get p4wn3d by complex devtools,”
+</blockquote>
+<div class='union-blockquote-attribution'><em>—Jeff Griffiths</em></div>
+
+<div class='post union-google-improvements'>
+  <p>There are some things Google is doing that I think we could improve upon.</p>
+</div>
+
+<ol class='union-points'>
+  <div class='union-point improvement'>
+    <div class='union-point-detail'>
+      <img src='/images/union/after-effects.png' alt='A picture of After Effects.' />
+    </div>
+
+    <li><strong class='union-point-strong'>I think animation as a metaphor for the web is a weak one.</strong> After Effects, one of the more popular animation tools from Adobe, took me four months to learn. Yikes.</li>
+  </div>
+
+  <div class='union-point improvement'>
+    <div class='union-point-detail'>
+      <img src='/images/union/chrome-devtools.png' alt='A picture of Chrome devtools.' />
+    </div>
+
+    <li><strong class='union-point-strong'>Chrome’s UI design is good but I see opportunities for us to be better.</strong> They’re called utilitarian, not beautiful. Their icon design isn’t as strong as it could be. They have UX problems as well. They have parts of their tools where we as a team think they’ve made mistakes. When UX is good we should copy and when it’s bad we will make something better.</li>
+  </div>
+
+  <div class='union-point improvement'>
+    <div class='union-point-detail wysiwyg'>
+      what-you-see-is-what-you-get-hopefully-that’s-not-awful
+    </div>
+
+    <li><strong class='union-point-strong'>They’re putting effort into a WYSIWYG editor.</strong> First person to market on that will get a lot of internet points but it will also be incredibly difficult to get right. This is an opportunity I think to just sit back, watch what happens and learn from what will be a bunch of pitfalls that Google has the time and money to fall into. It’s an experiment we should have the patience to just watch.</li>
+  </div>
+</ol>
+
+<img src='/images/union/apple.png' alt="Old Apple logo, couldn't be bothered to find the new one" class='union-logo' />
+
+<div class='post'>
+  <p>Apple has a really strict design system born out of having to make stuff look awesome on tiny lil’babyscreens. iPhone sales are how Apple makes money, so it is understandable that they have a lot of really <em>really</em> pro icon design, a deft hand when it comes to deleting things, and a lot of experience making complicated things simple. Apple’s known for their human-centered design patterns and there’s a lot of work they’ve done in the Safari devtools and even in Xcode that’s worth… well, stealing.</p>
+
+  <p>What Safari devtools is up to:</p>
+</div>
+
+<ol class='union-points'>
+  <div class='union-point'>
+    <div class='union-point-detail'>
+      <video src='/images/union/apple-design-guide.mp4' autoplay loop>
+        Sorry, your browser doesn't support embedded videos, 
+        but don't worry, you can <a href='/images/union/apple-design-guide.mp4'>download it</a>
+        and watch it with your favorite video player!
+      </video>
+    </div>
+
+    <li><strong class='union-point-strong'>Integration with the Apple design system.</strong> This means adherence to the human design guidelines and that really strong icon design. This probably sounds like a running joke at this point, but other companies are at a point where they have design systems and we do not. This is a non-trivial point, which is why I keep bringing it up; having documented UX pattern for a variety of situations allows them as a company to share solutions across their ecosystem, which is the only way one ties two operating systems and a suite of apps together in an elegant way. It’s a lot of work, and everyone thinks they’ve done it well.</li>
+  </div>
+
+  <div class='union-point'>
+    <div class='union-point-detail'>
+      <video src='/images/union/apple-stand-out.mp4' autoplay loop class='no-border'>
+        Sorry, your browser doesn't support embedded videos, 
+        but don't worry, you can <a href='/images/union/apple-stand-out.mp4'>download it</a>
+        and watch it with your favorite video player!
+      </video>
+    </div>
+
+    <li><strong class='union-point-strong'>They’re trying to ~stand out~.</strong> Honestly, I think this is not one of their strengths. Some of the things they do are just funny (like their responsive design mode only showing Apple devices) but they’ve actually created pitfalls in which it’s painful to switch between their tools and other browsers’ tools. This is a trap that is easy to avoid if we are willing to swallow our pride: we can and should copy UX patterns from other browsers. Finding the most common patterns and changing them only when you truly have improvements is considered being a good UX designer. Being better is step two after being as-good-as. Not an exciting rallying cry, but an important step all the same.</li>
+    </div>
+
+  <div class='union-point'>
+    <div class='union-point-detail'>
+    </div>
+
+    <li><strong class='union-point-strong'>They’re ahead of us with browser tab switching.</strong> We just… we need this, literally everyone else has it. 🙃</li>
+  </div>
+
+  <div class='union-point'>
+    <div class='union-point-detail'>
+      <video src='/images/union/xcode.mp4' autoplay loop>
+        Sorry, your browser doesn't support embedded videos, 
+        but don't worry, you can <a href='/images/union/xcode.mp4'>download it</a>
+        and watch it with your favorite video player!
+      </video>
+    </div>
+
+    <li><strong class='union-point-strong'>They have some interesting solutions to complicated UIs.</strong> The one I think of the most is panel hiding, which Safari devtools took from Xcode. These are things worth looking at and evaluating as good ideas—Xcode’s another weighty, difficult, complicated program that Apple has put a lot of work into making easier to use. In many ways IDEs have to solve a lot of the same problems that we do in devtools. A lot of you have responded really well to my designs with some solutions from iTunes in them, so it’s worth noting where a program has made something complicated simple.</li>
+  </div>
+
+  <div class='union-point'>
+    <div class='union-point-detail'>
+    </div>
+
+    <li><strong class='union-point-strong'>They’ve done an awesome job at curation.</strong> To explain what I mean by this there’s a Dieter Rams quote you may have heard before:</li>
+  </div>
+</ol>
+
+<p class='union-less'>Less, but better.</p>
+
+<div class='post'>
+  <video src='/images/union/seven-panels.mp4' class='union-inline-video' autoplay loop>
+    Sorry, your browser doesn't support embedded videos, 
+    but don't worry, you can <a href='/images/union/seven-panels.mp4'>download it</a>
+    and watch it with your favorite video player!
+  </video>
+
+  <p>They have seven panels you can enable. That’s it. By doing this they’ve completely eliminated some of our design challenges by being willing to unapologetically slash features they think don’t belong in their devtools. I think if we’re to be successful, we need some of this same cut-throat mentality to keep ourselves on track, to remember what’s important ,and to keep the tools useful to that low-skill set of people that I talked about before. It means being willing to mark bugs as WONTFIX. It means having to turn down contributions when the contributions don’t benefit devtools even though it feels awful to turn down contributions. Because this feels super crappy to do we should remember: cool products mean people want to contribute. That’s just the way things happen.</p>
+</div>
+
+<div class='union-products'>
+  <h2>COOL 
+  PRODUCTS =
+  PEOPLE 
+  WILL COME 👍
+  </h2>
+</div>
+
+<div class='post'>
+  <img src='/images/union/ie-question.png' alt="Yo, what's with IE?" />
+
+  <p>IE was just so terrible that apparently they just decided to scrap what they had and start from scratch with Edge, including with their devtools. With us ourselves having our own technical baggage (à la XUL, among other things) I can hardly blame them. Their tools are fairly bare-boned because of this. I think it’s safe to say that we’re not going to see the sort of break-neck innovation that Chrome outputs because Microsoft as a company is much more concerned with commercial licensing, not on web ad revenue. They’re playing a game of catchup. That said, I think they’re doing a couple things well:</p>
+</div>
+
+<ol class='union-points'>
+  <div class='union-point improvement'>
+    <div class='union-point-detail'>
+      <img src='/images/union/nothing-fancy.png' alt="Nothing particularly fancy." class='no-border' />
+    </div>
+
+    <li><strong class='union-point-strong'>Edge looks super similar to the other tools on the market.</strong> They copied Chrome in many ways. This helps with developer friction.</li>
+  </div>
+
+  <div class='union-point improvement'>
+    <div class='union-point-detail'>
+      <video src='/images/union/edge-tools.mp4' class='union-inline-video' autoplay loop>
+        Sorry, your browser doesn't support embedded videos, 
+        but don't worry, you can <a href='/images/union/edge-tools.mp4'>download it</a>
+        and watch it with your favorite video player!
+      </video>
+    </div>
+
+    <li><strong class='union-point-strong'>They do have a nice website dedicated solely to learning and using their devtools.</strong> They’ve eliminated contribution friction to the documentation by putting it up on Github. Their tools are bare boned, but they’ve put in the effort to document them, and to create a stand-alone site where users can learn more about them instead of putting them in a larger documentation site like MDN. I’m not arguing that a microsite like this is worth our time or dedication at the moment, but it’s always worth keeping these thoughts in the back of our minds. I think that as we accomplish things, we should write documentation as we can always worry where that documentation lives at a later date.</li>
+  </div>
+</ol>
+
+<div class='post union-devtools-current'>
+  <video src='/images/union/devtools-current.mp4' class='union-inline-video' autoplay loop>
+    Sorry, your browser doesn't support embedded videos, 
+    but don't worry, you can <a href='/images/union/devtools-current.mp4'>download it</a>
+    and watch it with your favorite video player!
+  </video>
+
+  <p>So, this is what we look like right now. I’m going to say what I think our biggest challenges are first and then what we should focus on. As you read this you should imagine what this means for you, and what you’re building.</p>
+
+  <p>Also for this next part, I have one more question I want you to keep in mind while we go over this stuff:</p>
+</div>
+
+<ol class='union-important-questions' id='union-important-questions'>
+  <li value="4">What should a Firefox Dev Summit look like if we had one? What is the work that we can do that would make Chrome nervous if we accomplished it?</li>
+</ol>
+
+<div class='post'>
+  <p><strong class='union-point-strong'>Our Biggest Barriers:</strong> I think we have legacy that holds us back. Not just code legacy, but also legacy in the ways we approach problems. Having been here a few months I have seen a paradigm where we prioritize the features people ask from us without questioning if they are the needs of the majority because they often are seemingly good ideas. These are our biggest mental barriers as I see them:</p>
+</div>
+
+<ol class='union-points'>
+  <div class='union-point improvement'>
+    <div class='union-point-detail'>
+      <img src='/images/union/curation.png' alt='Curation' class='no-border' />
+    </div>
+
+    <li><strong class='union-point-strong'>Curation.</strong> If we want elegant, easy-to-understand and easy-to-use tools, we have to be better at making authoritative decisions about what is and (more importantly) what isn’t worth our time and what is and what isn’t supposed to be in devtools. Everything we build we don’t just build, we maintain. For any of you solo-maintaining popular open source projects through Github or the like understand this distinction. This means that our tools don’t need to and sometimes shouldn’t roll out being very customizable. This also means that we’ll have good ideas that are technically innovative and fun to work on, but they might not belong in devtools all the same. I think that if we all adopt this mentality, we’ll end up with much better tools.</li>
+  </div>
+
+  <div class='union-point improvement'>
+    <div class='union-point-detail'>
+      <img src='/images/union/outdated-ui.png' alt='Outdated UI' class='no-border' />
+    </div>
+
+    <li><strong class='union-point-strong'>An Outdated UI.</strong> The way our tools look and the way they’re perceived are related. While the bulk of this work falls to me as a designer, making changes to our UI of course will also affect you all as engineers working in your own parts of our code ecosystem. I have really drastic UI changes I’d like to make and I know I’ll need help implementing them, making sure all of our design patterns are documented, and especially with testing our assumptions to make sure we’re making educated decisions.</li>
+  </div>
+
+  <div class='union-point improvement'>
+    <div class='union-point-detail'>
+    </div>
+
+    <li><strong class='union-point-strong'>You all are /very/ talented developers.</strong> I list this as a barrier because it does stand in the way of us having a beginners’ mindset. It can be hard to remember what it was like to be a beginner, or even just not as good as you are now, and the struggles you faced, and the hacks in your workflow you created, unless you documented them as you went along. Because it’s so hard to have a beginners’ mindset, we can only get over this hurdle by talking to people in the community more and by testing our assumptions about our devtools in a methodical way. As we build things, we’ll have assumptions as to what’s best and some of those assumptions are just going to flat out be wrong, 100% including mine.</li>
+  </div>
+</ol>
+
+<blockquote class='union-goals'>
+  Four Goals
+</blockquote>
+
+<div class='post'>
+  <p>With those in mind, these are the four big goals I’d like to see us accomplish as a team in 2016:</p>
+</div>
+
+<ol class='union-points'>
+  <div class='union-point'>
+    <div class='union-point-detail'>
+      <img src='/images/union/ui-simplification.png' alt='Curation' class='no-border' />
+    </div>
+
+    <li>The first is most directly related to me, and that’s a <strong class='union-point-strong'>Big UI simplification</strong>. I think the majority has been following along as I build out mockups and following along so I won’t painstakingly go through them here but this is one of those things where I super need the expertise of each of you working and building each tool to make sure that I’m getting the designs right. There’s just a lot to think about and without help I get things wrong.</li>
+  </div>
+
+  <div class='union-point'>
+    <div class='union-point-detail union-products'>
+      design + dev = 👍
+    </div>
+
+    <li><strong class='union-point-strong'>Solidify our Designer/Developer Tools.</strong> Patrick’s already a pioneer for this which is awesome, and I think that Chrome dev summit made it pretty obvious that tools like these are accepted really happily by the web dev community because they’re cool and because they demo really well. I’d love for the animation tools to be our first but not our last in this area of devtools. Providing better tools for OpenType, color picking, animations, filters, all open a bunch of possibilities for us. Part of what I need from everyone not actively working on this project is to see what problems developers have when working on website visuals, how they use our tools to solve issues, and then working back from there on how we can intelligently expand our toolset. So, slightly different from normal ideation, this is trying to see what problems people already have in the wild by observing them through user testing.</li>
+  </div>
+
+  <div class='union-point'>
+    <div class='union-point-detail'>
+      <img src='/images/union/rdm.png' alt='RDM' class="no-border" />
+    </div>
+
+    <li>The last is something that other browsers don’t have, and that’s the multi-viewport <strong class='union-point-strong'>Responsive Design Mode</strong> that Ryan demoed in Whistler. We already have a super awesome prototype from Ryan that I think would make big waves if it hit the market before something similar from other browers. So, 2016 is the year to help make this happen.</li>
+  </div>
+
+  <div class='union-point'>
+    <div class='union-point-detail'>
+      <img src='/images/union/metrics.png' alt='Metrics' class='no-bordder' />
+    </div>
+
+    <li>The last is that I’d like us to <strong class='union-point-strong'>come up with metrics we want to use to define success</strong>. Having benchmarks will help hold us accountable and give us an idea of what performs well and what doesn’t.</li>
+  </div>
+</ol>
+
+<div class='post union'>
+  <p>After Mozlando I feel all the more encouraged to say this: I think that our priority should be ensuring that the UX of our existing products is great. Maintaining, I understand, not nearly as fun as creating new things, but the community we serve is built mostly of web developers just trying to get websites built for work, or school, or their hobby. They are in the majority, and their needs, in my mind, supercede the needs of a few developers who think that the new tools we build on top of devtools would be really <em>cool</em>. And I think you’d all be surprised at the kind of love we can get just by making things we already have better.</p>
+</div>
