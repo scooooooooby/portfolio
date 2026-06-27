@@ -100,12 +100,8 @@ export default function RootLayout({
                 </div>
               }
               numberOfColumns={2}
-              secondColumn={
-                <div className="hidden lg:block">
-                  <Nav />
-                </div>
-              }
-              secondColumnClassName="fixed top-6 right-0 items-end lg:static"
+              secondColumn={<Nav />}
+              secondColumnClassName="fixed top-6 right-0 z-30 items-end"
             />
           </Container>
           <div style={{ minHeight: "calc(100vh - 180px)" }}>{children}</div>
